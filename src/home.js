@@ -28,7 +28,7 @@ function createHomePage() {
     location.classList.add('location');
     location.innerHTML = `
         <h2>Location</h2>
-        <p>123 Food Street, Flavor Town, USA</p>
+        <p>123 Some Street, SomePlace, India</p>
     `;
     home.appendChild(location);
 
