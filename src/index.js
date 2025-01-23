@@ -1,11 +1,15 @@
 import createMenu from './menu';
+import createHomePage from './home';
+import createAboutPage from './about';
+import createContact from './contact';
 
 let buttons = document.getElementsByClassName('navBtn');
 let content = document.getElementById('content');
 const mainContent = {
-    home: `<p> Welcome to my home page </p>`,
+    home: createHomePage(),
     menu: createMenu(),
-    about: `<p> Welcome to my about page </p>`,
+    about: createAboutPage(),
+    contact: createContact(),
 }
 
 for (let i = 0; i < buttons.length; i++) {
@@ -13,10 +17,6 @@ for (let i = 0; i < buttons.length; i++) {
         console.log(e.target.id);
         console.log(mainContent[e.target.id]);
         content.innerHTML = '';
-        if (e.target.id === 'menu') {
-            content.appendChild(mainContent[e.target.id]);
-        } else {
-            content.innerHTML = mainContent[e.target.id];
-        }
+        content.appendChild(mainContent[e.target.id]);
     });
 }
