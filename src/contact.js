@@ -14,7 +14,7 @@ function createContact() {
 
     contact.appendChild(phoneNumber);
     contact.appendChild(address);
-    contact.appendChild(restaurantLocation);
+    // contact.appendChild(restaurantLocation);
 
     return contact;
 }
